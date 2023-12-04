@@ -60,3 +60,17 @@ responsiveToggle.addEventListener("change", (e) => {
     navMenu.classList.remove("active");
   }
 });
+
+const seeMoreButton = document.querySelector(".read-more .btn");
+
+seeMoreButton.addEventListener("click", (e) => {
+  const silsilahMain = document.querySelector(".silsilah-main");
+  silsilahMain.classList.toggle("no-overflow");
+
+  const expanded = silsilahMain.classList.contains("no-overflow");
+  if (expanded) {
+    seeMoreButton.innerHTML = "Sembunyikan Selengkapnya";
+  } else {
+    seeMoreButton.innerHTML = "Lihat Selengkapnya";
+  }
+});
