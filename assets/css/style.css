@@ -393,9 +393,9 @@ section {
 }
 
 #arsitektur .sub-1 .bg-white {
-  border-radius: 0px 0px 0px 130px;
-  padding: 20px 150px 20px 30px;
+  border-radius: 0px 130px 130px 130px;
   align-items: center;
+  background-color: #fff;
 }
 
 #arsitektur .sub-1 .rounded-circle {
@@ -430,9 +430,9 @@ section {
 }
 
 #arsitektur .sub-2 .bg-white {
-  border-radius: 0px 0px 130px 0px;
-  padding: 20px 50px 20px 150px;
+  border-radius: 130px 0px 130px 130px;
   align-items: center;
+  background-color: #fff;
 }
 
 #arsitektur .sub-2 .rounded-circle {
@@ -462,19 +462,21 @@ section {
   line-height: normal;
 }
 
-#silsilah {
-  transition: all 3s linear;
-}
-
 #silsilah .silsilah-main {
+  transition: max-height 1s linear;
+  max-height: 90vh;
+  overflow: hidden;
+  display: grid;
   justify-content: center;
-  transition: all 2s linear;
 }
 
 #silsilah .silsilah-main object {
-  width: clamp(20rem, 100%, 1000rem);
+  width: clamp(10rem, 100%, 45rem);
   object-position: center;
   object-fit: fill;
+  margin: auto;
+  justify-content: center;
+
 }
 
 #silsilah .read-more {
@@ -493,22 +495,30 @@ section {
   -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
 }
 
-.no-overflow {
-  height: 100vh;
-  overflow: hidden;
-  transition: all 2s linear;
+#silsilah .no-overflow {
+  max-height: 800vh;
 }
+
 #galeri .list-galery img {
   border-radius: 10px;
   z-index: 1;
 }
+
 #galeri .list-galery .overlay {
   border-radius: 10px;
-  margin-top: -11.8vh;
   background-color: rgba(0, 0, 0, 0.685);
   padding: 20px;
   z-index: 2;
+  height: 50%;
+  transition: all 0.7s;
+  bottom: 0;
+  transform: translateY(200px);
 }
+
+#galeri .list-galery .overlay-container:hover > .overlay {
+  transform: translateY(0);
+}
+
 #galeri .list-galery h2 {
   color: var(--secondary);
   text-transform: capitalize;
@@ -517,6 +527,7 @@ section {
   font-weight: 700;
   line-height: normal;
 }
+
 footer {
   height: 7vh;
   background-color: var(--primary);
@@ -606,6 +617,8 @@ footer p {
     border-radius: 10px 10px 100px 0px;
     padding: 15px;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 15%, rgba(255, 255, 255, 1) 15%  100%);
+    background-color: transparent !important;
     margin-top: 1rem;
   }
 
@@ -631,11 +644,14 @@ footer p {
     border-radius: 10px 10px 0px 100px;
     padding: 15px;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 15%, rgba(255, 255, 255, 1) 15%  100%);
+    background-color: transparent !important;
     margin-top: 1rem;
   }
 
   #arsitektur .sub-2 .rounded-circle {
     position: relative;
+    background-color: #fff;
     z-index: 600;
   }
 
