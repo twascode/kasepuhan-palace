@@ -393,7 +393,7 @@ section {
 }
 
 #arsitektur .sub-1 .bg-white {
-  border-radius: 0px 34px 34px 150px;
+  border-radius: 0px 0px 0px 130px;
   padding: 20px 150px 20px 30px;
   align-items: center;
 }
@@ -430,7 +430,7 @@ section {
 }
 
 #arsitektur .sub-2 .bg-white {
-  border-radius: 0px 0px 150px 0px;
+  border-radius: 0px 0px 130px 0px;
   padding: 20px 50px 20px 150px;
   align-items: center;
 }
