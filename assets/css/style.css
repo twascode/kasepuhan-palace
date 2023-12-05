@@ -513,6 +513,7 @@ section {
   transition: all 0.7s;
   bottom: 0;
   transform: translateY(200px);
+  position: absolute;
 }
 
 #galeri .list-galery .overlay-container:hover > .overlay {
@@ -538,7 +539,7 @@ footer p {
   margin: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 998px) {
   .dark #navbar .nav-menu .nav {
     background-color: rgba(51, 58, 69, 0.7);
   }
@@ -658,5 +659,23 @@ footer p {
   #arsitektur .sub-2 .rounded-circle img {
     border-radius: 100%;
     width: 40dvw;
+  }
+  
+  #galeri .list-galery h2 {
+    color: var(--secondary);
+    text-transform: capitalize;
+    font-size: clamp(1rem, 1dvw, 100rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  #galeri .list-galery .overlay {
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 20px;
+    z-index: 2;
+    height: 100%;
+    position: relative;
+    transform: translateY(0)
   }
 }
