@@ -300,6 +300,7 @@ section {
 
 .title {
   width: clamp(18rem, 25vw, 100rem);
+  margin-top: 5vh;
 }
 
 /* sejarah  */
@@ -336,8 +337,11 @@ section {
 }
 
 #sejarah ul.timeline > li {
-  margin: 20px 0;
-  padding-left: 50px;
+  padding-left: 2vw;
+}
+
+#sejarah ul.timeline > li.sub-2 {
+  margin-top: 20px;
 }
 
 #sejarah ul.timeline > li:before {
@@ -469,6 +473,8 @@ section {
 
 #silsilah .silsilah-main object {
   width: clamp(20rem, 100%, 1000rem);
+  object-position: center;
+  object-fit: fill;
 }
 
 #silsilah .read-more {
@@ -490,9 +496,26 @@ section {
 .no-overflow {
   height: 100vh;
   overflow: hidden;
+  transition: all 2s linear;
 }
 #galeri .list-galery img {
   border-radius: 10px;
+  z-index: 1;
+}
+#galeri .list-galery .overlay {
+  border-radius: 10px;
+  margin-top: -11.8vh;
+  background-color: rgba(0, 0, 0, 0.685);
+  padding: 20px;
+  z-index: 2;
+}
+#galeri .list-galery h2 {
+  color: var(--secondary);
+  text-transform: capitalize;
+  font-size: clamp(1rem, 1dvw, 100rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 footer {
   height: 7vh;
@@ -553,6 +576,24 @@ footer p {
     padding: 15% 0 5% 10%;
   }
 
+  .title {
+    width: clamp(18rem, 25vw, 100rem);
+    margin-top: 0;
+  }
+  #sejarah .content {
+    z-index: 1;
+    height: 100%;
+    position: relative;
+    margin: 0 5vw 0 5vw;
+  }
+
+  #sejarah ul.timeline > li {
+    padding-left: 8vw;
+  }
+
+  #sejarah ul.timeline > li:before {
+    transform: translateY(5dvw);
+  }
   #arsitektur .sub-1 .desc p {
     color: #4f6f52;
     text-align: left;
