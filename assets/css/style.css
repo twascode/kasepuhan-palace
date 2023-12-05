@@ -300,12 +300,12 @@ section {
 
 .title {
   width: clamp(18rem, 25vw, 100rem);
-  margin-top: 15vh;
 }
 
 /* sejarah  */
 
 #sejarah {
+  /* height: 100vh; */
   min-height: 100vh;
   background-image: url("/assets/img/vector.svg");
   background-repeat: no-repeat;
@@ -491,7 +491,9 @@ section {
   height: 100vh;
   overflow: hidden;
 }
-
+#galeri .list-galery img {
+  border-radius: 10px;
+}
 footer {
   height: 7vh;
   background-color: var(--primary);
