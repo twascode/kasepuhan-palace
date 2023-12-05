@@ -69,8 +69,9 @@ seeMoreButton.addEventListener("click", (e) => {
 
   const expanded = silsilahMain.classList.contains("no-overflow");
   if (expanded) {
-    seeMoreButton.innerHTML = "Sembunyikan Selengkapnya";
-  } else {
     seeMoreButton.innerHTML = "Lihat Selengkapnya";
+    
+  } else {
+    seeMoreButton.innerHTML = "Sembunyikan Selengkapnya";
   }
 });
