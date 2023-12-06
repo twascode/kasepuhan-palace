@@ -501,6 +501,7 @@ section {
 #galeri {
   background-image: url("/assets/img/mega-mendung.png");
   background-repeat: repeat;
+  background-blend-mode: soft-light;
 }
 
 #galeri .list-galery img {
