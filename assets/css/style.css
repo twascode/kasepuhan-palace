@@ -476,7 +476,6 @@ section {
   object-fit: fill;
   margin: auto;
   justify-content: center;
-
 }
 
 #silsilah .read-more {
@@ -499,6 +498,11 @@ section {
   max-height: 800vh;
 }
 
+#galeri {
+  background-image: url("/assets/img/mega-mendung.png");
+  background-repeat: repeat;
+}
+
 #galeri .list-galery img {
   border-radius: 10px;
   z-index: 1;
@@ -509,11 +513,14 @@ section {
   background-color: rgba(0, 0, 0, 0.685);
   padding: 20px;
   z-index: 2;
-  height: 50%;
+  height: 100%;
   transition: all 0.7s;
   bottom: 0;
-  transform: translateY(200px);
+  transform: translateY(400px);
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #galeri .list-galery .overlay-container:hover > .overlay {
@@ -592,6 +599,7 @@ footer p {
     width: clamp(18rem, 25vw, 100rem);
     margin-top: 0;
   }
+
   #sejarah .content {
     z-index: 1;
     height: 100%;
@@ -618,7 +626,11 @@ footer p {
     border-radius: 10px 10px 100px 0px;
     padding: 15px;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 15%, rgba(255, 255, 255, 1) 15%  100%);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0% 15%,
+      rgba(255, 255, 255, 1) 15% 100%
+    );
     background-color: transparent !important;
     margin-top: 1rem;
   }
@@ -645,7 +657,11 @@ footer p {
     border-radius: 10px 10px 0px 100px;
     padding: 15px;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 15%, rgba(255, 255, 255, 1) 15%  100%);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0% 15%,
+      rgba(255, 255, 255, 1) 15% 100%
+    );
     background-color: transparent !important;
     margin-top: 1rem;
   }
@@ -660,7 +676,7 @@ footer p {
     border-radius: 100%;
     width: 40dvw;
   }
-  
+
   #galeri .list-galery h2 {
     color: var(--secondary);
     text-transform: capitalize;
@@ -676,6 +692,6 @@ footer p {
     z-index: 2;
     height: 100%;
     position: relative;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
