@@ -465,8 +465,10 @@ section {
   margin: 0 20dvw 0 20dvw;
 }
 
-#arsitektur .sub-1 .text-wrapper {
-  border-radius: 0px 200px 200px 200px;
+#arsitektur .sub-1 .text-wrapper-inside {
+  border-radius: 0px 0px 0px 120px;
+  padding: 1rem 12dvw 1rem 1rem;
+  margin-right: -12dvw;
   align-items: center;
 }
 
@@ -483,7 +485,7 @@ section {
 
 #arsitektur .sub-1 .desc p {
   text-align: right;
-  font-size: clamp(1rem, 0.5dvw, 100rem);
+  font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -491,24 +493,26 @@ section {
 
 #arsitektur .sub-1 .desc p span {
   text-align: right;
-  font-size: clamp(1rem, 0.5dvw, 100rem);
+  font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-#arsitektur .sub-2 .text-wrapper {
-  border-radius: 200px 0px 200px 200px;
+#arsitektur .sub-2 .text-wrapper-inside {
+  border-radius: 0px 0px 120px 0px;
+  padding: 1rem 1rem 1rem 12dvw;
+  margin-left: -12dvw;
   align-items: center;
 }
 
-.light #arsitektur .sub-1 .text-wrapper,
-.light #arsitektur .sub-2 .text-wrapper {
+.light #arsitektur .sub-1 .text-wrapper-inside,
+.light #arsitektur .sub-2 .text-wrapper-inside {
   background-color: #fff;
 }
 
-.dark #arsitektur .sub-1 .text-wrapper,
-.dark #arsitektur .sub-2 .text-wrapper {
+.dark #arsitektur .sub-1 .text-wrapper-inside,
+.dark #arsitektur .sub-2 .text-wrapper-inside {
   background-color: var(--primary-dark);
 }
 
@@ -533,14 +537,14 @@ section {
 }
 
 #arsitektur .sub-2 .desc p {
-  font-size: clamp(1rem, 1dvw, 100rem);
+  font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
 #arsitektur .sub-2 .desc p span {
-  font-size: clamp(1rem, 1dvw, 100rem);
+  font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -706,9 +710,15 @@ footer p {
     font-weight: 500;
     line-height: normal;
   }
-
+  #arsitektur .sub-1 .text-wrapper-inside {
+    background-color: transparent !important;
+    border-radius: 0;
+    padding: 25px 20px;
+    background-color: transparent !important;
+    margin-right: 0;
+  }
   #arsitektur .sub-1 .text-wrapper {
-    border-radius: 10px 10px 100px 100px;
+    border-radius: 10px 10px 150px 150px;
     padding: 25px 20px;
     align-items: center;
     background-image: linear-gradient(
@@ -719,8 +729,13 @@ footer p {
     background-color: transparent !important;
     margin-top: 1rem;
   }
+  #arsitektur .sub-1,
+  .sub-2 {
+    margin: 5rem 0;
+  }
 
   #arsitektur .sub-1 .rounded-circle {
+    transform: translateY(-2rem);
     position: relative;
     z-index: 600;
   }
@@ -731,15 +746,22 @@ footer p {
   }
 
   #arsitektur .sub-2 .desc p {
-    text-align: right;
+    text-align: center;
     font-style: normal;
+    text-align-last: center;
     font-weight: 500;
     line-height: normal;
   }
-
+  #arsitektur .sub-2 .text-wrapper-inside {
+    background-color: transparent !important;
+    border-radius: 0;
+    padding: 25px 20px;
+    background-color: transparent !important;
+    margin-left: 0;
+  }
   #arsitektur .sub-2 .text-wrapper {
-    border-radius: 10px 10px 0px 100px;
-    padding: 15px;
+    border-radius: 10px 10px 150px 150px;
+    padding: 25px 20px;
     align-items: center;
     background-color: transparent !important;
     margin-top: 1rem;
@@ -764,6 +786,7 @@ footer p {
   }
 
   #arsitektur .sub-2 .rounded-circle {
+    transform: translateY(-2rem);
     position: relative;
     z-index: 600;
   }
