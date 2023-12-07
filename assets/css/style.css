@@ -55,7 +55,7 @@ section {
 
 .dark,
 .dark i {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .dark #navbar .menu_btn > span,
@@ -79,11 +79,11 @@ section {
 }
 
 .dark a {
-  color: #e9ecf0;
+  color: var(--secondary);
 }
 
 .dark p {
-  color: #bdbdbd;
+  color: var(--secondary);
 }
 
 .dark #footer {
@@ -120,11 +120,11 @@ section {
 }
 
 .light a {
-  color: #333a45;
+  color: var(--primary);
 }
 
 .light p {
-  color: #69696b;
+  color: var(--primary);
 }
 
 .light #footer {
@@ -315,19 +315,30 @@ section {
 }
 
 #hero .gradient {
+  position: relative;
+  z-index: 3;
   background: linear-gradient(
     180deg,
     rgba(236, 227, 206, 0) 0%,
     #ece3ce 83.96%
   );
 }
-
-.dark #hero .gradient {
+#hero .gradient::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s;
   background-image: linear-gradient(
     180deg,
     rgba(236, 227, 206, 0) 0%,
     var(--secondary-dark) 83.96%
   );
+}
+
+.dark #hero .gradient::before {
+  opacity: 1;
 }
 
 #hero .hook-1 {
@@ -336,6 +347,8 @@ section {
 
 #hero .hook-1 .kasepuhan-title {
   width: 70vw;
+  position: absolute;
+  z-index: 2;
   margin-top: 15vh;
 }
 
@@ -453,7 +466,7 @@ section {
 }
 
 #arsitektur .sub-1 .text-wrapper {
-  border-radius: 0px 130px 130px 130px;
+  border-radius: 0px 200px 200px 200px;
   align-items: center;
 }
 
@@ -470,7 +483,7 @@ section {
 
 #arsitektur .sub-1 .desc p {
   text-align: right;
-  font-size: clamp(1rem, 1dvw, 100rem);
+  font-size: clamp(1rem, 0.5dvw, 100rem);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -478,14 +491,14 @@ section {
 
 #arsitektur .sub-1 .desc p span {
   text-align: right;
-  font-size: clamp(1rem, 1dvw, 100rem);
+  font-size: clamp(1rem, 0.5dvw, 100rem);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
 #arsitektur .sub-2 .text-wrapper {
-  border-radius: 130px 0px 130px 130px;
+  border-radius: 200px 0px 200px 200px;
   align-items: center;
 }
 
@@ -610,7 +623,7 @@ section {
 
 footer {
   height: 7vh;
-  background-color: var(--primary);
+  background-color: var((--primary));
 }
 
 footer p {
@@ -688,15 +701,15 @@ footer p {
   }
 
   #arsitektur .sub-1 .desc p {
-    text-align: left;
+    text-align: center;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
 
   #arsitektur .sub-1 .text-wrapper {
-    border-radius: 10px 10px 100px 0px;
-    padding: 15px;
+    border-radius: 10px 10px 100px 100px;
+    padding: 25px 20px;
     align-items: center;
     background-image: linear-gradient(
       to bottom,
