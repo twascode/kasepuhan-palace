@@ -317,6 +317,8 @@ section {
 #hero .gradient {
   position: relative;
   z-index: 3;
+  opacity: 1;
+  transition: opacity 0.7s;
   background: linear-gradient(
     180deg,
     rgba(236, 227, 206, 0) 0%,
@@ -330,9 +332,8 @@ section {
   inset: 0;
   opacity: 0;
   transition: opacity 0.7s;
-  background: linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 73.96%);
+  background: linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 83.96%);
 }
-
 .dark #hero .gradient::before {
   opacity: 1;
 }
@@ -346,8 +347,23 @@ section {
   position: absolute;
   z-index: 2;
   margin-top: 15vh;
+  opacity: 1;
+  transition: opacity 0.7s;
 }
-
+.dark #hero .hook-1 .kasepuhan-title {
+  opacity: 0;
+}
+#hero .hook-1 .kasepuhan-title-dark {
+  width: 70vw;
+  position: absolute;
+  z-index: 2;
+  margin-top: 15vh;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.dark #hero .hook-1 .kasepuhan-title-dark {
+  opacity: 1;
+}
 .title {
   width: clamp(18rem, 25vw, 100rem);
   margin-top: 5vh;
@@ -563,7 +579,9 @@ section {
   font-weight: 700;
   line-height: normal;
 }
-
+#silsilah {
+  overflow: hidden;
+}
 #silsilah .silsilah-main {
   transition: max-height 1s linear;
   max-height: 90vh;
@@ -572,25 +590,85 @@ section {
   justify-content: center;
 }
 
-#silsilah .silsilah-main object {
+/* #silsilah .silsilah-main object {
   width: clamp(10rem, 100%, 45rem);
   object-position: center;
   object-fit: fill;
   margin: auto;
   justify-content: center;
+} */
+#silsilah .silsilah-main .silsilah-object {
+  width: clamp(10rem, 100%, 45rem);
+  object-position: center;
+  object-fit: fill;
+  margin: auto;
+  overflow: hidden;
+  justify-content: center;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.7s;
 }
-
+.dark #silsilah .silsilah-main .silsilah-object {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  inset: 0 1000vh;
+  z-index: 2;
+}
+#silsilah .silsilah-main .silsilah-object-dark {
+  width: clamp(10rem, 100%, 45rem);
+  object-position: center;
+  object-fit: fill;
+  margin: auto;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  inset: 0 1000vh;
+  z-index: 2;
+  transition: opacity 0.7s;
+}
+.dark #silsilah .silsilah-main .silsilah-object-dark {
+  opacity: 1;
+  overflow: visible;
+  position: relative;
+  inset: 0;
+  z-index: 3;
+}
 #silsilah .read-more {
-  height: 10vh;
-  background: linear-gradient(
-    180deg,
-    rgba(236, 227, 206, 0) 0%,
-    #ece3ce 83.96%
-  );
+  margin-top: -10rem;
+  height: 20vh;
+  position: relative;
+  z-index: 3;
+  transition: background 0.7s;
+  -webkit-transition: background 0.7s;
+  background: linear-gradient(180deg, rgba(236, 227, 206, 0) 0%, #ece3ce 65%);
 }
-
+.dark #silsilah .read-more {
+  margin-top: -10rem;
+  height: 20vh;
+  position: relative;
+  z-index: 4;
+  transition: background 0.7s;
+  -webkit-transition: background 0.7s;
+  background: linear-gradient(180deg, rgba(236, 227, 206, 0) 0%, #292929 65%);
+}
 #silsilah .read-more .btn {
+  opacity: 1;
+  position: absolute;
+  z-index: 2;
   background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
+}
+.dark #silsilah .read-more .btn {
+  opacity: 1;
+  position: absolute;
+  z-index: 2;
+  color: var(--secondary);
+  background-color: var(--primary-dark);
   border-radius: 30px;
   box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
   -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
@@ -641,7 +719,7 @@ section {
 
 footer {
   height: 7vh;
-  background-color: var((--primary));
+  background-color: var(--primary-dark);
 }
 
 footer p {
