@@ -330,11 +330,7 @@ section {
   inset: 0;
   opacity: 0;
   transition: opacity 0.7s;
-  background-image: linear-gradient(
-    180deg,
-    rgba(236, 227, 206, 0) 0%,
-    var(--secondary-dark) 83.96%
-  );
+  background: linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 73.96%);
 }
 
 .dark #hero .gradient::before {
@@ -444,6 +440,12 @@ section {
   font-weight: 400;
   line-height: normal;
 }
+.dark #sejarah .desc p {
+  font-size: clamp(1rem, 0.9dvw, 100rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
 
 #sejarah .desc p span {
   font-size: clamp(1rem, 0.9dvw, 100rem);
@@ -488,6 +490,12 @@ section {
   font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+}
+.dark #arsitektur .sub-1 .desc p {
+  font-size: clamp(1rem, 1.2dvw, 100rem);
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -540,6 +548,12 @@ section {
   font-size: clamp(1rem, 1.2dvw, 100rem);
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+}
+.dark #arsitektur .sub-2 .desc p {
+  font-size: clamp(1rem, 1.2dvw, 100rem);
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
