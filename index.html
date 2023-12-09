@@ -53,11 +53,11 @@
   <body class="light">
     <div class="container-fluid position-fixed" id="navbar">
       <nav
-        class="nav-navbar d-flex flex-wrap align-items-center justify-content-between position-relative px-3"
+        class="nav-navbar d-flex align-items-center justify-content-between position-relative px-2"
       >
         <a
           href="#"
-          class="d-flex align-items-center col-md-3 text-dark text-decoration-none"
+          class="d-flex align-items-center col-lg-3 text-dark text-decoration-none"
         >
           <div class="mx-2">
             <svg
@@ -107,7 +107,7 @@
             class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
           >
             <li>
-              <a href="#" class="px-2 active nav-link">Beranda</a>
+              <a href="#hero" class="px-2 active nav-link">Beranda</a>
             </li>
             <li><a href="#sejarah" class="px-2 nav-link">Sejarah</a></li>
             <li><a href="#arsitektur" class="px-2 nav-link">Arsitektur</a></li>
@@ -116,7 +116,7 @@
           </ul>
         </div>
 
-        <div class="col-md-3 d-flex justify-content-end align-items-center">
+        <div class="col-lg-3 d-flex justify-content-end align-items-center">
           <button class="btn pt-2 darkmode-toggle">
             <i class="ph-moon-bold mt-1 position-absolute"></i>
             <i class="ph-sun-bold mt-1"></i>
@@ -133,7 +133,7 @@
       </nav>
     </div>
 
-    <section id="hero">
+    <section id="hero" class="hook">
       <div class="test"></div>
       <div class="gradient">
         <div class="hook-1 d-flex justify-content-center">
@@ -149,16 +149,24 @@
       </div>
     </section>
 
-    <section id="sejarah">
+    <section id="sejarah" class="hook">
       <div
         class="d-flex flex-column justify-content-center align-content-center align-items-center content"
       >
         <div
-          class="hook d-flex justify-content-center title"
+          class="d-flex justify-content-center title position-relative"
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
         >
+          <object
+            data="assets/img/sejarah-title.svg"
+            class="title-abstract"
+          ></object>
           <object data="assets/img/sejarah-title.svg" class="title"></object>
+          <object
+            data="assets/img/sejarah-title-dark.svg"
+            class="title-dark"
+          ></object>
         </div>
         <div class="d-flex mt-5 align-content-center gap-5">
           <div class="desc d-flex gap-5 flex-column overflow-hidden">
@@ -167,7 +175,7 @@
                 <div
                   class="text-wrapper p-4"
                   data-aos="fade-left"
-                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-anchor-placement="top-bottom"
                 >
                   <p class="mb-0">
                     <span>Keraton Kasepuhan</span> adalah keraton yang terletak
@@ -185,7 +193,7 @@
                 <div
                   class="text-wrapper p-4"
                   data-aos="fade-right"
-                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-anchor-placement="top-bottom"
                 >
                   <p class="mb-0">
                     Keraton Kasepuhan berisi
@@ -219,23 +227,31 @@
       </div>
     </section>
 
-    <section id="arsitektur">
+    <section id="arsitektur" class="hook">
       <div
-        class="d-flex flex-column justify-content-center align-content-center align-items-center content"
+        class="position-relative d-flex flex-column justify-content-center align-content-center align-items-center"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
       >
-        <div
-          class="hook"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-        >
-          <object data="assets/img/arsitektur-title.svg" class="title"></object>
-        </div>
+        <object
+          data="assets/img/arsitektur-title.svg"
+          class="title-abstract"
+        ></object>
+        <object data="assets/img/arsitektur-title.svg" class="title"></object>
+        <object
+          data="assets/img/arsitektur-title-dark.svg"
+          class="title-dark"
+        ></object>
+      </div>
+      <div
+        class="d-flex flex-column justify-content-center align-content-center content mt-4"
+      >
         <div class="d-flex flex-column w-100">
           <div class="d-flex sub-1">
             <div
               class="d-flex align-items-center text-wrapper justify-content-center flex-column flex-column-reverse flex-lg-row"
               data-aos="fade-left"
-              data-aos-anchor-placement="bottom-bottom"
+              data-aos-anchor-placement="top-bottom"
             >
               <div class="desc d-flex text-wrapper-inside">
                 <p class="mb-0 ps-lg-3 ps-0">
@@ -259,7 +275,7 @@
             <div
               class="d-flex align-items-center justify-content-center text-wrapper flex-lg-row-reverse flex-column-reverse"
               data-aos="fade-right"
-              data-aos-anchor-placement="bottom-bottom"
+              data-aos-anchor-placement="top-bottom"
             >
               <div
                 class="desc d-flex position-relative z-1 text-wrapper-inside"
@@ -285,27 +301,32 @@
       </div>
     </section>
 
-    <section id="silsilah" class="pt-5">
+    <section id="silsilah" class="pt-5 hook">
       <div
-        class="d-flex flex-column justify-content-center align-content-center align-items-center content"
+        class="hook d-flex flex-column justify-content-center align-content-center align-items-center content position-relative"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       >
-        <object data="assets/img/silsilah-title.svg"></object>
-      </div>
-      <div class="silsilah-main d-flex justify-content-center">
-        <!-- <div class="silsilah-div"></div> -->
         <object
-          data="assets/img/silsilah.svg"
-          class="silsilah-object"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
+          data="assets/img/silsilah-title.svg"
+          class="title-abstract"
         ></object>
+        <object data="assets/img/silsilah-title.svg" class="title"></object>
+        <object
+          data="assets/img/silsilah-title-dark.svg"
+          class="title-dark"
+        ></object>
+      </div>
+      <div
+        class="silsilah-main d-flex justify-content-center"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <!-- <div class="silsilah-div"></div> -->
+        <object data="assets/img/silsilah.svg" class="silsilah-object"></object>
         <object
           data="assets/img/silsilah-dark.svg"
           class="silsilah-object-dark"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
         ></object>
       </div>
       <div class="read-more d-flex justify-content-center align-items-center">
@@ -313,13 +334,21 @@
       </div>
     </section>
 
-    <section id="galeri" class="position-relative z-99 pt-5 pb-5">
+    <section id="galeri" class="position-relative z-99 pt-5 pb-5 hook">
       <div
-        class="d-flex flex-column justify-content-center align-content-center align-items-center content"
+        class="d-flex flex-column justify-content-center align-content-center align-items-center content position-relative"
         data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
+        data-aos-anchor-placement="top-bottom"
       >
+        <object
+          data="assets/img/galeri-title.svg"
+          class="title-abstract"
+        ></object>
         <object data="assets/img/galeri-title.svg" class="title"></object>
+        <object
+          data="assets/img/galeri-title-dark.svg"
+          class="title-dark"
+        ></object>
       </div>
       <div class="container list-galery mt-5">
         <div
@@ -328,7 +357,7 @@
           <div
             class="col-12 col-md-3 d-flex flex-grow-1 justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/gerbang.webp"
@@ -342,7 +371,7 @@
           <div
             class="col-12 col-lg-3 flex-grow-1 d-flex justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/residence.webp"
@@ -356,7 +385,7 @@
           <div
             class="col-12 col-lg-3 flex-grow-1 d-flex justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/siti-inggil.webp"
@@ -370,7 +399,7 @@
           <div
             class="col-12 col-lg-3 d-flex flex-grow-1 justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/inside-residence.webp"
@@ -384,7 +413,7 @@
           <div
             class="col-12 col-lg-3 d-flex flex-grow-1 justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/museum-pusaka.webp"
@@ -398,7 +427,7 @@
           <div
             class="col-12 col-lg-3 d-flex flex-grow-1 justify-content-center align-content-center align-items-center flex-row flex-lg-column overflow-hidden position-relative overlay-container"
             data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
             <img
               src="assets/img/paksi.webp"
@@ -413,7 +442,7 @@
       </div>
     </section>
 
-    <footer class="d-flex justify-content-center align-items-center">
+    <footer class="d-flex justify-content-center align-items-center text-center">
       <p>© 2023 Copyright TWAS Team. All rights reserved.</p>
     </footer>
 

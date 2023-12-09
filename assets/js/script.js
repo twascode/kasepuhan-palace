@@ -17,19 +17,48 @@ var myMagicLine = new magicLine(document.querySelectorAll(".nav-menu"), {
 });
 myMagicLine.init();
 
-const navLinks = document.querySelectorAll(".nav-link");
+// Section on scroll trigger navbar
+const triggerScrollElements = document.querySelectorAll(".hook");
 
+window.addEventListener("scroll", () => {
+  triggerScrollElements.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 20;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top <= offset + height) {
+      const target = document.querySelector(`a[href='#${id}']`);
+      const activeLink = document.querySelector(".active");
+      activeLink?.classList.remove("active");
+      target?.classList.add("active");
+      target?.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
+    }
+  });
+});
+
+// Navbar on click
+const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     const activeLink = document.querySelector(".act");
-    activeLink.classList.remove("act");
+    activeLink?.classList.remove("act");
     link.classList.add("act");
   });
 });
 
+// Dark mode
 const darkmodeToggle = document.querySelector(".darkmode-toggle");
 const logo = document.querySelectorAll(".logo");
 const iconDarkmode = document.querySelectorAll(".darkmode-toggle i");
+const isDarkMode = localStorage.getItem("darkMode");
+
+if (isDarkMode == "true") {
+  iconDarkmode[0].style.opacity = 0;
+  iconDarkmode[1].style.opacity = 1;
+  document.body.classList.add("dark");
+  document.body.classList.remove("light");
+}
 
 darkmodeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -38,18 +67,17 @@ darkmodeToggle.addEventListener("click", () => {
   if (document.body.classList.contains("dark")) {
     iconDarkmode[0].style.opacity = 0;
     iconDarkmode[1].style.opacity = 1;
-    for (i = 0; i < logo.length; i++) {
-      logo[i].src = "assets/img/twas-light.webp";
-    }
+
+    localStorage.setItem("darkMode", true);
   } else {
     iconDarkmode[1].style.opacity = 0;
     iconDarkmode[0].style.opacity = 1;
-    for (i = 0; i < logo.length; i++) {
-      logo[i].src = "assets/img/twas-dark.webp";
-    }
+
+    localStorage.setItem("darkMode", false);
   }
 });
 
+// Burger icon
 const responsiveToggle = document.getElementById("menu_toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -61,8 +89,8 @@ responsiveToggle.addEventListener("change", (e) => {
   }
 });
 
+// Lihat selengkapnya
 const seeMoreButton = document.querySelector(".read-more .btn");
-
 seeMoreButton.addEventListener("click", (e) => {
   const silsilahMain = document.querySelector(".silsilah-main");
   silsilahMain.classList.toggle("no-overflow");

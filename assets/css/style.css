@@ -61,7 +61,7 @@ section {
 .dark #navbar .menu_btn > span,
 .dark #navbar .menu_btn > span::before,
 .dark #navbar .menu_btn > span::after {
-  background-color: var(--primary-dark);
+  background-color: var(--secondary);
 }
 
 .dark #navbar .active {
@@ -325,6 +325,7 @@ section {
     #ece3ce 83.96%
   );
 }
+
 #hero .gradient::before {
   position: absolute;
   z-index: 1;
@@ -342,31 +343,53 @@ section {
   width: 100vw;
 }
 
-#hero .hook-1 .kasepuhan-title {
-  width: 70vw;
+#hero .hook-1 .kasepuhan-title,
+#hero .hook-1 .kasepuhan-title-dark {
+  width: clamp(20rem, 70vw, 100rem);
   position: absolute;
   z-index: 2;
   margin-top: 15vh;
   opacity: 1;
   transition: opacity 0.7s;
 }
+
 .dark #hero .hook-1 .kasepuhan-title {
   opacity: 0;
 }
+
 #hero .hook-1 .kasepuhan-title-dark {
-  width: 70vw;
-  position: absolute;
-  z-index: 2;
-  margin-top: 15vh;
   opacity: 0;
-  transition: opacity 0.7s;
 }
+
 .dark #hero .hook-1 .kasepuhan-title-dark {
   opacity: 1;
 }
-.title {
+
+.title-abstract {
   width: clamp(18rem, 25vw, 100rem);
   margin-top: 5vh;
+  visibility: hidden;
+  transition: opacity 0.7s;
+}
+
+.title,
+.title-dark {
+  width: clamp(18rem, 25vw, 100rem);
+  margin-top: 5vh;
+  transition: opacity 0.7s;
+  position: absolute;
+}
+
+.title-dark {
+  opacity: 0;
+}
+
+.dark .title {
+  opacity: 0;
+}
+
+.dark .title-dark {
+  opacity: 1;
 }
 
 /* sejarah  */
@@ -743,6 +766,7 @@ section {
   line-height: 3rem;
   margin-bottom: 0;
 }
+
 #galeri .list-galery h2 span {
   color: white;
   text-align: center;
@@ -753,12 +777,15 @@ section {
   line-height: 3rem;
   margin-bottom: 0;
 }
+
 .dark #galeri .list-galery h2 {
   color: var(--primary-dark);
 }
+
 .dark #galeri .list-galery h2 span {
   color: var(--primary-dark);
 }
+
 footer {
   height: 7vh;
   background-color: var(--primary-dark);
@@ -844,6 +871,7 @@ footer p {
     font-weight: 500;
     line-height: normal;
   }
+
   #arsitektur .sub-1 .text-wrapper-inside {
     background-color: transparent !important;
     border-radius: 0;
@@ -851,6 +879,7 @@ footer p {
     background-color: transparent !important;
     margin-right: 0;
   }
+
   #arsitektur .sub-1 .text-wrapper {
     border-radius: 10px 10px 150px 150px;
     padding: 25px 20px;
@@ -863,6 +892,7 @@ footer p {
     background-color: transparent !important;
     margin-top: 1rem;
   }
+
   #arsitektur .sub-1,
   .sub-2 {
     margin: 5rem 0;
