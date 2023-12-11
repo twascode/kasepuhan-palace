@@ -602,24 +602,24 @@ section {
   font-weight: 700;
   line-height: normal;
 }
+
 #silsilah {
   overflow: hidden;
 }
+
 #silsilah .silsilah-main {
-  transition: max-height 1s linear;
+  transition: max-height 0.7s ease;
   max-height: 90vh;
   overflow: hidden;
   display: grid;
   justify-content: center;
 }
 
-/* #silsilah .silsilah-main object {
-  width: clamp(10rem, 100%, 45rem);
-  object-position: center;
-  object-fit: fill;
-  margin: auto;
-  justify-content: center;
-} */
+#silsilah .no-overflow {
+  height: auto;
+  max-height: 800vh;
+}
+
 #silsilah .silsilah-main .silsilah-object {
   width: clamp(10rem, 100%, 45rem);
   object-position: center;
@@ -632,6 +632,7 @@ section {
   z-index: 1;
   transition: opacity 0.7s;
 }
+
 .dark #silsilah .silsilah-main .silsilah-object {
   opacity: 0;
   overflow: hidden;
@@ -652,6 +653,7 @@ section {
   z-index: 2;
   transition: opacity 0.7s;
 }
+
 .dark #silsilah .silsilah-main .silsilah-object-dark {
   opacity: 1;
   overflow: visible;
@@ -659,6 +661,7 @@ section {
   inset: 0;
   z-index: 3;
 }
+
 #silsilah .read-more {
   margin-top: -10rem;
   height: 20vh;
@@ -668,6 +671,7 @@ section {
   -webkit-transition: background 0.7s;
   background: linear-gradient(180deg, rgba(236, 227, 206, 0) 0%, #ece3ce 65%);
 }
+
 .dark #silsilah .read-more {
   margin-top: -10rem;
   height: 20vh;
@@ -677,6 +681,7 @@ section {
   -webkit-transition: background 0.7s;
   background: linear-gradient(180deg, rgba(236, 227, 206, 0) 0%, #292929 65%);
 }
+
 #silsilah .read-more .btn {
   opacity: 1;
   position: absolute;
@@ -686,6 +691,7 @@ section {
   box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
   -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
 }
+
 .dark #silsilah .read-more .btn {
   opacity: 1;
   position: absolute;
@@ -695,10 +701,6 @@ section {
   border-radius: 30px;
   box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
   -webkit-box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.77);
-}
-
-#silsilah .no-overflow {
-  max-height: 800vh;
 }
 
 #galeri::before {
@@ -712,6 +714,7 @@ section {
   background-image: url("/assets/img/mega-mendung.png");
   background-repeat: repeat;
 }
+
 .dark #galeri::before {
   opacity: 0.01;
   background-image: url("/assets/img/mega-mendung-dark.png");
@@ -737,6 +740,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 .dark #galeri .list-galery .overlay {
   border-radius: 10px;
   background-color: rgba(237, 228, 207, 0.7);
@@ -823,7 +827,8 @@ footer p {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: -500%;
+    top: -800%;
+    padding-top: 0.4em;
   }
 
   #navbar .active {
