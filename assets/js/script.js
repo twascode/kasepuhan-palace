@@ -17,26 +17,6 @@ var myMagicLine = new magicLine(document.querySelectorAll(".nav-menu"), {
 });
 myMagicLine.init();
 
-// Section on scroll trigger navbar
-const triggerScrollElements = document.querySelectorAll(".hook");
-
-window.addEventListener("scroll", () => {
-  triggerScrollElements.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 20;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
-
-    if (top >= offset && top <= offset + height) {
-      const target = document.querySelector(`a[href='#${id}']`);
-      const activeLink = document.querySelector(".active");
-      activeLink?.classList.remove("active");
-      target?.classList.add("active");
-      target?.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
-    }
-  });
-});
-
 // Navbar on click
 const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((link) => {
